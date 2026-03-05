@@ -1,0 +1,36 @@
+:root{
+  --accent:#0b6b63;
+  --accent-2:#00a896;
+  --muted:#6b7280;
+  --card-bg:#ffffff;
+  --page-bg:#f6fbfb;
+  --radius:12px;
+  --shadow:0 10px 30px rgba(2,6,23,0.08);
+}
+*{box-sizing:border-box}
+body{margin:0;font-family:Inter,system-ui,Arial;background:linear-gradient(180deg,#f6fbfb,#eef7f6);color:#072227}
+.topbar{display:flex;align-items:center;justify-content:space-between;padding:14px 20px;background:linear-gradient(90deg,var(--accent),var(--accent-2));color:#fff;box-shadow:0 4px 18px rgba(2,6,23,0.12)}
+.brand{display:flex;align-items:center;gap:12px}
+.logo{width:40px;height:40px;border-radius:8px;background:linear-gradient(135deg,#00a896,#00796b)}
+.title{font-weight:800;font-size:1.15rem}
+.nav{display:flex;gap:12px}
+.nav-btn{background:transparent;border:none;color:rgba(255,255,255,0.95);font-weight:700;cursor:pointer}
+.user-actions{display:flex;gap:10px;align-items:center}
+.app-grid{display:flex;gap:18px;padding:20px;max-width:1200px;margin:20px auto}
+.sidebar{width:220px;padding:12px;border-radius:12px;background:linear-gradient(180deg,rgba(255,255,255,0.9),rgba(255,255,255,0.8));box-shadow:var(--shadow)}
+.sidebar button{display:block;width:100%;padding:10px;border-radius:8px;border:none;background:transparent;text-align:left;font-weight:700;cursor:pointer;margin-bottom:8px}
+.main{flex:1;display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.card{background:var(--card-bg);padding:14px;border-radius:12px;box-shadow:var(--shadow);transition:transform .18s ease}
+.card:hover{transform:translateY(-6px)}
+.feed-card, .project-card, .leader-card{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:12px;border-radius:10px;background:linear-gradient(180deg,#fff,#fbfffe)}
+.avatar{width:48px;height:48px;border-radius:10px;background:linear-gradient(135deg,#00a896,#00796b)}
+.muted{color:var(--muted)}
+.small-text{font-size:0.85rem;color:var(--muted)}
+.btn-primary{background:var(--accent);color:#fff;border:none;padding:8px 12px;border-radius:10px;cursor:pointer;font-weight:700}
+.btn-outline{background:transparent;border:2px solid var(--accent);color:var(--accent);padding:8px 12px;border-radius:10px;cursor:pointer}
+.auth-page{display:flex;justify-content:center;align-items:center;padding:40px}
+.auth-card{width:360px}
+.auth-card form{display:flex;flex-direction:column;gap:8px}
+.auth-card input{padding:10px;border-radius:8px;border:1px solid #e6eef0}
+.error{color:#b00020;margin-top:6px}
+@media(max-width:900px){ .app-grid{flex-direction:column;padding:12px} .main{grid-template-columns:1fr} .sidebar{width:100%} }
